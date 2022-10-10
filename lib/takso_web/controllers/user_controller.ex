@@ -28,7 +28,7 @@ defmodule TaksoWeb.UserController do
     redirect(conn, to: Routes.user_path(conn, :index))
   end
 
-    def create(conn, %{"user" => user_params}) do
+  def create(conn, %{"user" => user_params}) do
     changeset = User.changeset(%User{}, user_params)
 
     case Repo.insert(changeset) do
@@ -39,5 +39,10 @@ defmodule TaksoWeb.UserController do
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
     end
+  end
+
+  def show(conn, %{"id" => id}) do
+    user = Repo.get!(User, id)
+    render(conn, "show.html", user: user)
   end
 end
