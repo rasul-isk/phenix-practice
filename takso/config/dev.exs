@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :takso, Takso.Repo,
   username: "postgres",
-  password: "post",
+  password: "postgres",
   hostname: "localhost",
   database: "takso_dev",
   stacktrace: true,
@@ -23,7 +23,7 @@ config :takso, TaksoWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "V8MdcWrfDtmBN7QBKsoCH5SCeZ37WcEzD/g0nD7pnIia5VHWj/hRlIO2tSk7ZJjr",
+  secret_key_base: "PWni3bNltYTHbPwCD0WcdXbls7+Qs8bR32KhJcnXzE02dWyxPvYCHd3FVq8a7mUl",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
