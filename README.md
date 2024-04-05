@@ -1,4 +1,4 @@
-# Takso
+# Taks
 
 To start your Phoenix server:
 
